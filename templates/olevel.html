@@ -1,0 +1,112 @@
+{% extends 'obase.html' %}
+
+{% block content %}
+    <h1 class="text-center mt-5">O Level Equivalence Calculator</h1>
+    <form method="POST" class="mt-4">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Subject Type</th>
+                    <th>Grade</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <select name="subject" class="form-select">
+                            <option value="science">Science</option>
+                            <option value="arts">Arts</option>
+                        </select>
+                    </td>
+                    <td>
+                        <input type="text" name="grade" class="form-control" placeholder="A*, A, B, C, D, E, U" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <select name="subject" class="form-select">
+                            <option value="science">Science</option>
+                            <option value="arts">Arts</option>
+                        </select>
+                    </td>
+                    <td>
+                        <input type="text" name="grade" class="form-control" placeholder="A*, A, B, C, D, E, U" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <select name="subject" class="form-select">
+                            <option value="science">Science</option>
+                            <option value="arts">Arts</option>
+                        </select>
+                    </td>
+                    <td>
+                        <input type="text" name="grade" class="form-control" placeholder="A*, A, B, C, D, E, U" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <select name="subject" class="form-select">
+                            <option value="science">Science</option>
+                            <option value="arts">Arts</option>
+                        </select>
+                    </td>
+                    <td>
+                        <input type="text" name="grade" class="form-control" placeholder="A*, A, B, C, D, E, U" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <select name="subject" class="form-select">
+                            <option value="science">Science</option>
+                            <option value="arts">Arts</option>
+                        </select>
+                    </td>
+                    <td>
+                        <input type="text" name="grade" class="form-control" placeholder="A*, A, B, C, D, E, U" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <select name="subject" class="form-select">
+                            <option value="science">Science</option>
+                            <option value="arts">Arts</option>
+                        </select>
+                    </td>
+                    <td>
+                        <input type="text" name="grade" class="form-control" placeholder="A*, A, B, C, D, E, U" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <select name="subject" class="form-select">
+                            <option value="science">Science</option>
+                            <option value="arts">Arts</option>
+                        </select>
+                    </td>
+                    <td>
+                        <input type="text" name="grade" class="form-control" placeholder="A*, A, B, C, D, E, U" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <select name="subject" class="form-select">
+                            <option value="science">Science</option>
+                            <option value="arts">Arts</option>
+                        </select>
+                    </td>
+                    <td>
+                        <input type="text" name="grade" class="form-control" placeholder="A*, A, B, C, D, E, U" required>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <button type="submit" class="btn btn-success">Calculate</button>
+    </form>
+
+    {% if equivalence is not none %}
+        <div class="alert alert-info mt-4">
+            Your O Level equivalence is: <strong>{{ equivalence }}</strong>
+        </div>
+    {% endif %}
+{% endblock %}

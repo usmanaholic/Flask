@@ -1,0 +1,59 @@
+
+
+
+<html>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <body>
+        
+    
+
+
+<div class="container">
+    <h1 style="color: black;">Comsats Merit Calculator</h1>
+    <form method="POST">
+        <label for="matric">Matriculation (Out of 1100):</label>
+        <input type="text" id="matric" name="matric" required>
+        
+        <label for="inter">Intermediate (Out of 1100):</label>
+        <input type="text" id="inter" name="inter" required>
+        
+        <label for="net">NAT (Out of 100):</label>
+        <input type="text" id="net" name="net" required>
+        
+        <button type="submit">Calculate Merit</button>
+    </form>
+
+    {% if merit is not none %}
+        <div class="result">Calculated Merit: {{ merit }}</div>
+
+        {% if chances %}
+            <h2>Your Chances in Comsats Fields:</h2>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Field</th>
+                        <th>Min Merit</th>
+                        <th>Max Merit</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for chance in chances %}
+                        <tr>
+                            <td>{{ chance.name }}</td>
+                            <td>{{ chance.min_merit }}</td>
+                            <td>{{ chance.max_merit }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        {% else %}
+            <div class="result">Unfortunately, your merit doesn't match any field.</div>
+        {% endif %}
+    {% endif %}
+</div>
+
+<link rel="stylesheet" href="/static/nust.css">
+</body>
+</html>
